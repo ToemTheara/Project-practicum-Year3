@@ -16,8 +16,6 @@ import com.example.coffeeshop.Fragment.FragmentAbout;
 import com.example.coffeeshop.Fragment.FragmentCard;
 import com.example.coffeeshop.Fragment.FragmentMap;
 import com.example.coffeeshop.Fragment.FragmentMenu;
-import com.example.coffeeshop.Fragment.FragmentPromo;
-import com.example.coffeeshop.Fragment.FragmentSignOut;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,18 +44,13 @@ public class MainActivity extends AppCompatActivity {
                 drawer.closeDrawers();
                 switch (menuItem.getItemId()){
                     case R.id.nav_menu:
-                        getSupportActionBar().setTitle("Menu");
+                        getSupportActionBar().setTitle("Popular Place");
                         fragment = new FragmentMenu();
                         loadFragment(fragment);
                         break;
                     case R.id.nav_card:
-                        getSupportActionBar().setTitle("Card");
+                        getSupportActionBar().setTitle("Nearest Place");
                         fragment = new FragmentCard();
-                        loadFragment(fragment);
-                        break;
-                    case R.id.nav_promo:
-                        getSupportActionBar().setTitle("Promotion");
-                        fragment = new FragmentPromo();
                         loadFragment(fragment);
                         break;
                     case R.id.nav_map:
