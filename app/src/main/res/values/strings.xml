@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">CoffeeShop</string>
+    <string name="nav_menu">MENU</string>
+    <string name="nav_card">CARD</string>
+    <string name="nav_promo">PROMOTION</string>
+    <string name="nav_map">MAP</string>
+    <string name="nav_about">ABOUT US</string>
+    <string name="nav_logout">LOG OUT</string>
+    <string name="userName">User name</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="hot_drinks">Hot Drinks</string>
+    <string name="types">(types)</string>
+    <string name="name_of_drinks">Name of Drinks</string>
+    <string name="pricel">price L: </string>
+    <string name="_5_00">​​$ 5.00</string>
+    <string name="price_s">Price S: </string>
+    <string name="price_m">Price M: </string>
+    <string name="typesString">Types: </string>
+    <string name="contact_us_070_614_749_096_956_9201">Phone : 070 614 749 , 096 956 9201</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_serial">Card Serial</string>
+    <string name="our_location">Our location</string>
+    <string name="activate_card">Activate Card</string>
+    <string name="des_about">Simple, pretty, and sweet yet could be strong, sophisticated, harsh,
+        sharp, and bitter. This is what coffee shop brought to customers.
+    </string>
+    <string name="des_about2">Our shop was established in
+        2019 July by a group of young and talent developers. It has now become the benchmark coffee
+        concept, the ones who revived coffee culture in Phnom Penh.</string>
+    <string name="des_about3">We look forward to expanding
+    our coffee business to serve our increasing customers. We start from small family members to
+    a lots members in the next future. Our family is committed to serving customers and to train
+        new members to be experienced and a part of us.</string>
+</resources>
