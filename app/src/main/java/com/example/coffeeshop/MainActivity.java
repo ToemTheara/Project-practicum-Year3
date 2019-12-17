@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import com.example.coffeeshop.Fragment.FragmentAbout;
 import com.example.coffeeshop.Fragment.FragmentCard;
 import com.example.coffeeshop.Fragment.FragmentMap;
-import com.example.coffeeshop.Fragment.FragmentMenu;
+import com.example.coffeeshop.Fragment.FragmentPopularPlace;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();
 
         getSupportActionBar().setTitle("Menu");
-        loadFragment(new FragmentMenu());
+        loadFragment(new FragmentPopularPlace());
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()){
                     case R.id.nav_menu:
                         getSupportActionBar().setTitle("Popular Place");
-                        fragment = new FragmentMenu();
+                        fragment = new FragmentPopularPlace();
                         loadFragment(fragment);
                         break;
                     case R.id.nav_card:

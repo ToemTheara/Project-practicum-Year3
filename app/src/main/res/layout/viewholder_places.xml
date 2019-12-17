@@ -17,7 +17,7 @@
             >
 
             <ImageView
-                android:id="@+id/imgDrink"
+                android:id="@+id/imgPlace"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
@@ -25,10 +25,10 @@
                 />
 
             <TextView
-                android:id="@+id/txtNameDrink"
+                android:id="@+id/txtNamePlace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/imgDrink"
+                android:layout_toEndOf="@id/imgPlace"
                 android:layout_marginStart="10dp"
                 android:text="@string/hot_drinks"
                 android:textSize="20sp"
@@ -37,8 +37,8 @@
                 android:id="@+id/txtTypes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txtNameDrink"
-                android:layout_toEndOf="@id/imgDrink"
+                android:layout_below="@id/txtNamePlace"
+                android:layout_toEndOf="@id/imgPlace"
                 android:layout_marginStart="10dp"
                 android:text="@string/types"
                 android:textSize="15sp"
@@ -50,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtTypes"
-                android:layout_toEndOf="@id/imgDrink"
+                android:layout_toEndOf="@id/imgPlace"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="30dp"
                 android:text="@string/hot_drinks"
@@ -58,7 +58,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPriceS"
+                android:id="@+id/txtLocationVH"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

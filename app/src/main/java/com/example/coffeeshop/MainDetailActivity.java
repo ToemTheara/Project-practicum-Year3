@@ -8,13 +8,13 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.coffeeshop.Adapter.AdapterDrinks;
+import com.example.coffeeshop.Adapter.AdapterPopularPlaces;
 import com.squareup.picasso.Picasso;
 
 public class MainDetailActivity extends AppCompatActivity {
 
-    private AdapterDrinks adapter;
-    private String nameDrink;
+    private AdapterPopularPlaces adapter;
+    private String namePlace;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class MainDetailActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         getIncomingIntent();
-        getSupportActionBar().setTitle(nameDrink);
+        getSupportActionBar().setTitle(namePlace);
     }
 
     @Override
@@ -39,34 +39,21 @@ public class MainDetailActivity extends AppCompatActivity {
 
     private void getIncomingIntent(){
 
-        nameDrink = getIntent().getStringExtra("nameDrink");
-        String priceS = getIntent().getStringExtra("priceS");
-        String priceM = getIntent().getStringExtra("priceM");
-        String priceL = getIntent().getStringExtra("priceL");
+        String namePlace = getIntent().getStringExtra("namePlace");
         String image = getIntent().getStringExtra("image");
         String description = getIntent().getStringExtra("description");
-        String type = getIntent().getStringExtra("type");
+        String location = getIntent().getStringExtra("location");
 
-        setData(nameDrink, priceS, priceM, priceL, image, description, type);
+        setData(namePlace, image, description, location);
 
     }
-    private void setData(String nameDrink, String priceSs, String priceMs, String priceLs, String images, String descriptions, String types){
+    private void setData(String namePlace,  String images, String descriptions, String types){
         TextView name = findViewById(R.id.txtDetailName);
-        name.setText(nameDrink);
-
-        TextView priceS = findViewById(R.id.txtDetailPriceS);
-        priceS.setText(priceSs);
-
-        TextView priceM = findViewById(R.id.txtDetailPriceM);
-        priceM.setText(priceMs);
-
-        TextView priceL = findViewById(R.id.txtDetailPriceL);
-        priceL.setText(priceLs);
-
+        name.setText(namePlace);
         TextView description = findViewById(R.id.txtDetailDescription);
         description.setText(descriptions);
 
-        TextView type = findViewById(R.id.txtDetailType);
+        TextView type = findViewById(R.id.txtDetailLocation);
         type.setText(types);
 
         ImageView image = findViewById(R.id.imgDetail);

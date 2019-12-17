@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="@string/name_of_drinks"
+        android:text="Name of Places"
         android:textStyle="bold"
         android:textSize="30sp" />
 
@@ -34,20 +34,20 @@
         android:gravity="center">
 
         <TextView
-            android:id="@+id/txtStringType"
+            android:id="@+id/txtLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/typesString"
+            android:text="Location:"
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/txtDetailType"
+            android:id="@+id/txtDetailLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_toEndOf="@id/txtStringType"
-            android:text="@string/name_of_drinks"
+            android:layout_toEndOf="@id/txtLocation"
+            android:text="Name of Places"
             android:textStyle="italic"
             android:textSize="20sp" />
     </RelativeLayout>
@@ -58,76 +58,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="10dp"
-        android:text="@string/name_of_drinks"
+        android:text="Name of Places"
         android:textSize="20sp" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center">
 
-        <TextView
-            android:id="@+id/txtStringPriceS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/price_s"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/txtDetailPriceS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/txtStringPriceS"
-            android:layout_marginStart="10dp"
-            android:text="@string/_5_00"
-            android:textSize="20sp" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center">
-
-        <TextView
-            android:id="@+id/txtStringPriceM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/price_m"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/txtDetailPriceM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/txtStringPriceM"
-            android:layout_marginStart="10dp"
-            android:text="@string/_5_00"
-            android:textSize="20sp" />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center">
-
-        <TextView
-            android:id="@+id/txtStringPriceL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/pricel"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/txtDetailPriceL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/txtStringPriceL"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="10dp"
-            android:text="@string/_5_00"
-            android:textSize="20sp" />
-    </RelativeLayout>
 
 </LinearLayout>

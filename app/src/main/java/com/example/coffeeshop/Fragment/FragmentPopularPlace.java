@@ -21,7 +21,7 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
-import com.example.coffeeshop.Adapter.AdapterDrinks;
+import com.example.coffeeshop.Adapter.AdapterPopularPlaces;
 import com.example.coffeeshop.R;
 
 import org.json.JSONArray;
@@ -30,7 +30,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-public class FragmentMenu extends Fragment implements BaseSliderView.OnSliderClickListener,
+public class FragmentPopularPlace extends Fragment implements BaseSliderView.OnSliderClickListener,
         ViewPagerEx.OnPageChangeListener{
     HashMap<String, String> HashMapForURL;
 
@@ -42,7 +42,7 @@ public class FragmentMenu extends Fragment implements BaseSliderView.OnSliderCli
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_menu, container, false);
+        View view = inflater.inflate(R.layout.fragment_popular_place, container, false);
 
         SliderLayout sliderLayout = view.findViewById(R.id.slider);
         RecyclerView recyclerView = view.findViewById(R.id.recyclerViewMain);
@@ -82,13 +82,13 @@ public class FragmentMenu extends Fragment implements BaseSliderView.OnSliderCli
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setNestedScrollingEnabled(false);
 
-        final AdapterDrinks adapterHotDrinks = new AdapterDrinks();
-        recyclerView.setAdapter(adapterHotDrinks);
+        final AdapterPopularPlaces adapterPopularPlaces = new AdapterPopularPlaces();
+        recyclerView.setAdapter(adapterPopularPlaces);
 
         RequestQueue queue = Volley.newRequestQueue(getContext());
 
         //create request
-        String url = "https://api.myjson.com/bins/lq5vz";
+        String url = "https://api.myjson.com/bins/pg3ic";
         JsonArrayRequest request = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -102,40 +102,8 @@ public class FragmentMenu extends Fragment implements BaseSliderView.OnSliderCli
                         e.printStackTrace();
                     }
                 }
-                adapterHotDrinks.setNames(names);
-                //price S
-                String[] priceSs = new String[response.length()];
-                for (int i = 0; i <= response.length(); i++) {
-                    try {
-                        JSONObject jsonObject = response.getJSONObject(i);
-                        priceSs[i] = jsonObject.getString("priceS");
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                adapterHotDrinks.setPriceSs(priceSs);
-                //price M
-                String[] priceMs = new String[response.length()];
-                for (int i = 0; i <= response.length(); i++) {
-                    try {
-                        JSONObject jsonObject = response.getJSONObject(i);
-                        priceMs[i] = jsonObject.getString("priceM");
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                adapterHotDrinks.setPriceMs(priceMs);
-                //price L
-                String[] priceLs = new String[response.length()];
-                for (int i = 0; i <= response.length(); i++) {
-                    try {
-                        JSONObject jsonObject = response.getJSONObject(i);
-                        priceLs[i] = jsonObject.getString("priceL");
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                adapterHotDrinks.setPriceLs(priceLs);
+                adapterPopularPlaces.setNames(names);
+
                 //description
                 String[] descriptions = new String[response.length()];
                 for (int i = 0; i <= response.length(); i++) {
@@ -146,7 +114,7 @@ public class FragmentMenu extends Fragment implements BaseSliderView.OnSliderCli
                         e.printStackTrace();
                     }
                 }
-                adapterHotDrinks.setDescriptions(descriptions);
+               adapterPopularPlaces.setDescriptions(descriptions);
                 //image urls
                 String[] imageUrls = new String[response.length()];
                 for (int i = 0; i <= response.length(); i++) {
@@ -157,18 +125,18 @@ public class FragmentMenu extends Fragment implements BaseSliderView.OnSliderCli
                         e.printStackTrace();
                     }
                 }
-                adapterHotDrinks.setImages(imageUrls);
-                //types
-                String[] types = new String[response.length()];
+                adapterPopularPlaces.setImages(imageUrls);
+                //locations
+                String[] locations = new String[response.length()];
                 for (int i = 0; i <= response.length(); i++) {
                     try {
                         JSONObject jsonObject = response.getJSONObject(i);
-                        types[i] = jsonObject.getString("type");
+                        locations[i] = jsonObject.getString("location");
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
-                adapterHotDrinks.setTypes(types);
+               adapterPopularPlaces.setLocation(locations);
             }
         }, new Response.ErrorListener() {
             @Override

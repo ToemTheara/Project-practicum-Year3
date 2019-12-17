@@ -15,36 +15,19 @@ import com.example.coffeeshop.MainDetailActivity;
 import com.example.coffeeshop.R;
 import com.squareup.picasso.Picasso;
 
-public class AdapterDrinks extends RecyclerView.Adapter<AdapterDrinks.DrawerViewHolder> {
+public class AdapterPopularPlaces extends RecyclerView.Adapter<AdapterPopularPlaces.DrawerViewHolder> {
 
     private Context context;
     private String[] names;
-    private String[] priceSs;
-    private String[] priceMs;
-    private String[] priceLs;
     private String[] images;
     private String[] descriptions;
-    private String[] types;
+    private String[] locations;
 
     public void setNames(String[] names) {
         this.names = names;
         notifyDataSetChanged();
     }
 
-    public void setPriceSs(String[] priceSs) {
-        this.priceSs = priceSs;
-        notifyDataSetChanged();
-    }
-
-    public void setPriceMs(String[] priceMs) {
-        this.priceMs = priceMs;
-        notifyDataSetChanged();
-    }
-
-    public void setPriceLs(String[] priceLs) {
-        this.priceLs = priceLs;
-        notifyDataSetChanged();
-    }
 
     public void setImages(String[] images) {
         this.images = images;
@@ -56,33 +39,32 @@ public class AdapterDrinks extends RecyclerView.Adapter<AdapterDrinks.DrawerView
         notifyDataSetChanged();
     }
 
-    public void setTypes(String[] types) {
-        this.types = types;
+    public void setLocation(String[] locations) {
+        this.locations = locations;
+        notifyDataSetChanged();
     }
 
     @NonNull
     @Override
-    public AdapterDrinks.DrawerViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public AdapterPopularPlaces.DrawerViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
-        View itemView = layoutInflater.inflate(R.layout.viewholder_drinks, viewGroup, false);
-        AdapterDrinks.DrawerViewHolder viewHolder = new AdapterDrinks.DrawerViewHolder(itemView);
+        View itemView = layoutInflater.inflate(R.layout.viewholder_places, viewGroup, false);
+        AdapterPopularPlaces.DrawerViewHolder viewHolder = new AdapterPopularPlaces.DrawerViewHolder(itemView);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterDrinks.DrawerViewHolder drawerViewHolder, final int i) {
-        String nameDrink = names[i];
-        String priceS = priceSs[i];
-        String priceM = priceMs[i];
-        String priceL = priceLs[i];
+    public void onBindViewHolder(@NonNull AdapterPopularPlaces.DrawerViewHolder drawerViewHolder, final int i) {
+        String namePlaces = names[i];
         String image = images[i];
         String description = descriptions[i];
-        String type = types[i];
+        String location = locations[i];
 
-        drawerViewHolder.txtName.setText(nameDrink);
+        drawerViewHolder.txtName.setText(namePlaces);
+
+        drawerViewHolder.txtName.setText(namePlaces);
         drawerViewHolder.txtDescription.setText(description);
-        drawerViewHolder.txtPriceS.setText(priceS);
-        drawerViewHolder.txtType.setText(type);
+        drawerViewHolder.txtLocation.setText(location);
         context = drawerViewHolder.imgUrl.getContext();
         Picasso.with(context).load(image).into(drawerViewHolder.imgUrl);
 
@@ -90,13 +72,10 @@ public class AdapterDrinks extends RecyclerView.Adapter<AdapterDrinks.DrawerView
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, MainDetailActivity.class);
-                intent.putExtra("nameDrink", names[i]);
-                intent.putExtra("priceS", priceSs[i]);
-                intent.putExtra("priceM", priceMs[i]);
-                intent.putExtra("priceL", priceLs[i]);
+                intent.putExtra("namePlace", names[i]);
                 intent.putExtra("image", images[i]);
                 intent.putExtra("description", descriptions[i]);
-                intent.putExtra("type", types[i]);
+                intent.putExtra("location", locations[i]);
                 context.startActivity(intent);
             }
         });
@@ -116,19 +95,17 @@ public class AdapterDrinks extends RecyclerView.Adapter<AdapterDrinks.DrawerView
 
         private TextView txtName;
         private TextView txtDescription;
-        private TextView txtPriceS;
-        private TextView txtType;
+        private TextView txtLocation;
         private ImageView imgUrl;
         private CardView cardView;
 
         public DrawerViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            txtName = itemView.findViewById(R.id.txtNameDrink);
-            imgUrl = itemView.findViewById(R.id.imgDrink);
+            txtName = itemView.findViewById(R.id.txtNamePlace);
+            imgUrl = itemView.findViewById(R.id.imgPlace);
             txtDescription = itemView.findViewById(R.id.txtDescription);
-            txtPriceS = itemView.findViewById(R.id.txtPriceS);
-            txtType = itemView.findViewById(R.id.txtTypes);
+            txtLocation = itemView.findViewById(R.id.txtLocationVH);
             cardView = itemView.findViewById(R.id.cardView);
         }
     }
