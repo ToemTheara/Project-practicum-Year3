@@ -25,6 +25,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="Name of Places"
+        android:textColor="#8000ff"
         android:textStyle="italic"
 
         android:textSize="20sp" />

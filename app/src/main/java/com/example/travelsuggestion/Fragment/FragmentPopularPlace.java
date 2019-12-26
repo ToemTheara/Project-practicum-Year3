@@ -88,7 +88,7 @@ public class FragmentPopularPlace extends Fragment implements BaseSliderView.OnS
         RequestQueue queue = Volley.newRequestQueue(getContext());
 
         //create request
-        String url = "https://api.myjson.com/bins/pg3ic";
+        String url = "https://api.myjson.com/bins/100rd8";
         JsonArrayRequest request = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
