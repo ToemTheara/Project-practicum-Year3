@@ -1,4 +1,4 @@
-package com.example.coffeeshop;
+package com.example.travelsuggestion;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.coffeeshop.Adapter.AdapterPopularPlaces;
+import com.example.travelsuggestion.Adapter.AdapterPopularPlaces;
 import com.squareup.picasso.Picasso;
 
 public class MainDetailActivity extends AppCompatActivity {

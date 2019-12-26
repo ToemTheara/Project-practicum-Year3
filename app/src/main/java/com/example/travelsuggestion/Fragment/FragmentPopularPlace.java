@@ -1,4 +1,4 @@
-package com.example.coffeeshop.Fragment;
+package com.example.travelsuggestion.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -21,8 +21,8 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
-import com.example.coffeeshop.Adapter.AdapterPopularPlaces;
-import com.example.coffeeshop.R;
+import com.example.travelsuggestion.Adapter.AdapterPopularPlaces;
+import com.example.travelsuggestion.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -152,11 +152,11 @@ public class FragmentPopularPlace extends Fragment implements BaseSliderView.OnS
 
         HashMapForURL = new HashMap<>();
 
-        HashMapForURL.put("Slide1", "https://ak1.picdn.net/shutterstock/videos/925081/thumb/1.jpg");
-        HashMapForURL.put("Slide2", "https://png.pngtree.com/thumb_back/fw800/back_pic/02/65/13/095787272316695.jpg");
-        HashMapForURL.put("Slide3", "https://i.ytimg.com/vi/G0vzdaALJ7s/maxresdefault.jpg");
-        HashMapForURL.put("Slide4", "https://ae01.alicdn.com/kf/HTB1vJHfc2jM8KJjSZFNq6zQjFXay/wallpaper-hand-painted-European-and-American-coffee-cup-coffee-shop-coffee-beans-English-background-wall-wallpaper.jpg");
-        HashMapForURL.put("Slide5", "https://www.nespresso.com/shared_res/mosaic_freehtml/images/b2b/home/hero-banner-background-1.jpg");
+        HashMapForURL.put("Slide1", "https://q-cf.bstatic.com/images/hotel/max1024x768/106/10687031.jpg");
+        HashMapForURL.put("Slide2", "https://www.blacktomato.com/wp-content/uploads/2012/04/Cambodias-amazing-beaches.jpg");
+        HashMapForURL.put("Slide3", "https://www.khmerangkortourguide.com/userfiles/9680dc3169f78813dd5a86e00e3e8ef5--thai-thai-thai-art(8).jpg");
+        HashMapForURL.put("Slide4", "https://ak8.picdn.net/shutterstock/videos/19284568/thumb/1.jpg");
+        HashMapForURL.put("Slide5", "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/5e/d0.jpg?fit=crop&w=320&h=140");
     }
 
     @Override

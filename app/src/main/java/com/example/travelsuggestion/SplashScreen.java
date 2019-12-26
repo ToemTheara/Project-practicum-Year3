@@ -1,4 +1,4 @@
-package com.example.coffeeshop;
+package com.example.travelsuggestion;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +23,6 @@ public class SplashScreen extends AppCompatActivity {
                 SplashScreen.this.startActivity(intent);
                 SplashScreen.this.finish();
             }
-        }, 2000);
+        }, 1000);
     }
 }

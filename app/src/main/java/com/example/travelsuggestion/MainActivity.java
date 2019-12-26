@@ -1,4 +1,4 @@
-package com.example.coffeeshop;
+package com.example.travelsuggestion;
 
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -12,10 +12,10 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.example.coffeeshop.Fragment.FragmentAbout;
-import com.example.coffeeshop.Fragment.FragmentCard;
-import com.example.coffeeshop.Fragment.FragmentMap;
-import com.example.coffeeshop.Fragment.FragmentPopularPlace;
+import com.example.travelsuggestion.Fragment.FragmentAbout;
+import com.example.travelsuggestion.Fragment.FragmentCard;
+import com.example.travelsuggestion.Fragment.FragmentMap;
+import com.example.travelsuggestion.Fragment.FragmentPopularPlace;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         toggle.getDrawerArrowDrawable().setColor(Color.WHITE);
         toggle.syncState();
 
-        getSupportActionBar().setTitle("Menu");
+        getSupportActionBar().setTitle("Places");
         loadFragment(new FragmentPopularPlace());
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.nav_card:
                         getSupportActionBar().setTitle("Nearest Place");
-                        fragment = new FragmentCard();
+                        fragment = new FragmentPopularPlace();
                         loadFragment(fragment);
                         break;
                     case R.id.nav_map:

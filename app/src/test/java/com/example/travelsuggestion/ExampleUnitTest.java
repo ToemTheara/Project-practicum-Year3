@@ -1,4 +1,4 @@
-package com.example.coffeeshop;
+package com.example.travelsuggestion;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.coffeeshop.Adapter;
+package com.example.travelsuggestion.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,8 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.coffeeshop.MainDetailActivity;
-import com.example.coffeeshop.R;
+import com.example.travelsuggestion.MainDetailActivity;
+import com.example.travelsuggestion.R;
 import com.squareup.picasso.Picasso;
 
 public class AdapterPopularPlaces extends RecyclerView.Adapter<AdapterPopularPlaces.DrawerViewHolder> {
@@ -57,13 +57,11 @@ public class AdapterPopularPlaces extends RecyclerView.Adapter<AdapterPopularPla
     public void onBindViewHolder(@NonNull AdapterPopularPlaces.DrawerViewHolder drawerViewHolder, final int i) {
         String namePlaces = names[i];
         String image = images[i];
-        String description = descriptions[i];
         String location = locations[i];
 
         drawerViewHolder.txtName.setText(namePlaces);
 
         drawerViewHolder.txtName.setText(namePlaces);
-        drawerViewHolder.txtDescription.setText(description);
         drawerViewHolder.txtLocation.setText(location);
         context = drawerViewHolder.imgUrl.getContext();
         Picasso.with(context).load(image).into(drawerViewHolder.imgUrl);
@@ -94,7 +92,6 @@ public class AdapterPopularPlaces extends RecyclerView.Adapter<AdapterPopularPla
     public class DrawerViewHolder extends RecyclerView.ViewHolder {
 
         private TextView txtName;
-        private TextView txtDescription;
         private TextView txtLocation;
         private ImageView imgUrl;
         private CardView cardView;
@@ -104,7 +101,6 @@ public class AdapterPopularPlaces extends RecyclerView.Adapter<AdapterPopularPla
 
             txtName = itemView.findViewById(R.id.txtNamePlace);
             imgUrl = itemView.findViewById(R.id.imgPlace);
-            txtDescription = itemView.findViewById(R.id.txtDescription);
             txtLocation = itemView.findViewById(R.id.txtLocationVH);
             cardView = itemView.findViewById(R.id.cardView);
         }
