@@ -23,14 +23,17 @@
     <string name="card_serial">Card Serial</string>
     <string name="our_location">Our location</string>
     <string name="activate_card">Activate Card</string>
-    <string name="des_about">Simple, pretty, and sweet yet could be strong, sophisticated, harsh,
-        sharp, and bitter. This is what coffee shop brought to customers.
+    <string name="des_about">
+        The Travel Suggestion app uses your location to send you helpful recommendations
+        on nearby places to stay, things to do and more. We also share this information
+        with trusted third party partners to provide you with relevant content and a better
+        experience. These locations are collected even if the app is in the background.
+        Location settings can be configured in the Settings app.
     </string>
-    <string name="des_about2">Our shop was established in
-        2019 July by a group of young and talent developers. It has now become the benchmark coffee
-        concept, the ones who revived coffee culture in Phnom Penh.</string>
-    <string name="des_about3">We look forward to expanding
-    our coffee business to serve our increasing customers. We start from small family members to
-    a lots members in the next future. Our family is committed to serving customers and to train
-        new members to be experienced and a part of us.</string>
+    <string name="des_about2">
+        Contact us: 0966 622 798, 089 899 959
+        Facebook: Toem Theara, Touch Tharoth
+    </string>
+
+
 </resources>
